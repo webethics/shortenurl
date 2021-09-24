@@ -10,7 +10,7 @@
             @if(!empty($urls) && $urls->count())
                 @foreach($urls as $key => $value)
                     <tr>
-                        <td><a target="_blank" href="{{ $value->full_shortened_url }}">{{ $value->full_shortened_url }}</a></td>
+                        <td><a target="_blank" href="{{ $value->shortened_url }}">{{ $value->shortened_url }}</a></td>
                         <td>{{ $value->destination }}</td>
                         <td>{{ date('d/m/Y, h:i A', strtotime($value->created_at)) }}</td>
                     </tr>

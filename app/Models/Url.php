@@ -19,13 +19,14 @@ class Url extends Model
         'user_id',
     ];
 
+    protected $appends = ['shortened_url'];    
     
     /**
 	 * Get the full shortened url.
 	 *
 	 * @return string
 	 */
-	public function getFullShortenedUrlAttribute()
+	public function getShortenedUrlAttribute()
 	{	   
 	    return url('/')."/s/{$this->slug}";
 	}
